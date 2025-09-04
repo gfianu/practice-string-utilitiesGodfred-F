@@ -7,6 +7,7 @@ function capitalize(str){
     }
 }
 
+// Creating reverse function
 function reverse(str){
     if (!str || typeof str !== "string"){
         throw new TypeError("Error! Please input string!");
@@ -15,6 +16,7 @@ function reverse(str){
     }
 }
 
+// Creating contains function
 function contains(str, substr){
     if (!str || !substr || typeof str !== "string" || typeof substr !== "string" ){
         throw new TypeError("Error! Please input string!");
