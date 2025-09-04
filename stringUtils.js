@@ -1,20 +1,27 @@
 // Creating capitalize function
 function capitalize(str){
-    return str[0].toUpperCase() + str.slice(1);
+    if (!str || typeof str !== "string"){
+        throw new TypeError("Error! Please input string!");
+    } else {
+        return str[0].toUpperCase() + str.slice(1);
+    }
 }
 
-
 function reverse(str){
-    return str.split("").reverse().join("");
+    if (!str || typeof str !== "string"){
+        throw new TypeError("Error! Please input string!");
+    } else {
+        return str.split("").reverse().join("");
+    }
 }
 
 function contains(str, substr){
-    return str.includes(str);
+    if (!str || !substr || typeof str !== "string" || typeof substr !== "string" ){
+        throw new TypeError("Error! Please input string!");
+    } else {
+        return str.includes(str);
+    }
 }
-// test
-// console.log(capitalize("zebra"));
-// console.log(reverse("zebra"));
-// console.log(contains("Hi Good morning!", "Good"));
 
 module.exports = {
     capitalize: capitalize,
